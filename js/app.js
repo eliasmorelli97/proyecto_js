@@ -9,11 +9,12 @@ class Producto {
 
 const producto1 = new Producto(0, 'Motherboard', 1, 15000)
 const producto2 = new Producto(1, 'Procesador', 1, 45000)
-const producto3 = new Producto(2, 'Memoria Ram', 1, 8000)
-const producto4 = new Producto(3, 'Fuente de poder', 1, 10000)
-const producto5 = new Producto(4, 'HDD', 1, 4000)
-const producto6 = new Producto(5, 'SSD', 1, 6000)
-const producto7 = new Producto(6, 'Gabinete', 1, 12000)
+const producto3 = new Producto(2, 'Placa de video', 1, 60000)
+const producto4 = new Producto(3, 'Memoria Ram', 1, 8000)
+const producto5 = new Producto(4, 'Fuente de poder', 1, 10000)
+const producto6 = new Producto(5, 'HDD', 1, 4000)
+const producto7 = new Producto(6, 'SSD', 1, 6000)
+const producto8 = new Producto(7, 'Gabinete', 1, 12000)
 
 let carrito = []
 let seleccionarProducto = true
@@ -69,7 +70,7 @@ const totalCarrito = () => {
 }
 
 while (seleccionarProducto) {
-    let opcionProducto = prompt('Indique el número del producto que desea agregar al carrito:\n\n1. Motherboard\n2. Procesador\n3. Memoria Ram\n4. Fuente de poder\n5. HDD\n6. SSD\n7. Gabinete')
+    let opcionProducto = prompt('Indique el número del producto que desea agregar al carrito:\n\n1. Motherboard\n2. Procesador\n3. Placa de video\n4. Memoria Ram\n5. Fuente de poder\n6. HDD\n7. SSD\n8. Gabinete')
 
     switch (opcionProducto) {
         case '1':
@@ -98,6 +99,10 @@ while (seleccionarProducto) {
 
         case '7':
             agregarProducto(producto7)
+            break;
+
+        case '8':
+            agregarProducto(producto8)
             break;
     
         default:
