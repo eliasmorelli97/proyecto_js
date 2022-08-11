@@ -16,32 +16,35 @@
         <div class="titulos">
             <h1>Tu tienda de Hardware favorita</h1>
             <hr>
-            <h2 id="bienvenida">¡Hola Usuario!</h2>
-        </div>
-        <div class="buscador">
-            <input id="txtBuscador" type="text">
-            <input id="btnBuscador" type="button" value="Buscar">
         </div>
         <div class="contenido">
             <aside class="aside">
                 <h3>Categorias</h3>
                 <hr>
                 <ul class="categorias">
-                    <li>Motherboards</li>
-                    <li>Procesadores</li>
-                    <li>Placas de video</li>
-                    <li>Memorias RAM</li>
-                    <li>Fuentes de poder</li>
-                    <li>HDD</li>
-                    <li>SSD</li>
-                    <li>Gabinetes</li>
+                    <li><a href="#" class="categoria" data-id="Motherboards">Motherboards</a></li>
+                    <li><a href="#" class="categoria" data-id="Procesadores">Procesadores</a></li>
+                    <li><a href="#" class="categoria" data-id="Placas de video">Placas de video</a></li>
+                    <li><a href="#" class="categoria" data-id="Memorias RAM">Memorias RAM</a></li>
+                    <li><a href="#" class="categoria" data-id="Fuentes">Fuentes</a></li>
+                    <li><a href="#" class="categoria" data-id="HDD">HDD</a></li>
+                    <li><a href="#" class="categoria" data-id="SSD">SSD</a></li>
+                    <li><a href="#" class="categoria" data-id="Gabinetes">Gabinetes</a></li>
                 </ul>
             </aside>
-            <section id="articulos" class="productos">
-                <!-- Articulos creados mediante Javascript -->
-            </section>
+            <div class="contenedor">
+                <div class="buscador">
+                    <input id="txtBusqueda" type="text">
+                    <input id="btnBusqueda" type="button" value="Buscar">
+                </div>
+                <h2 id="filtro"></h2>
+                <section class="productos">
+                    <!-- Articulos creados mediante Javascript -->
+                </section>
+            </div>
         </div>
     </main>
+    <script src="./js/data.js"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>

@@ -7,14 +7,14 @@
 //     }
 // }
 
-// const producto1 = new Producto(0, 'Motherboard', 1, 15000)
-// const producto2 = new Producto(1, 'Procesador', 1, 45000)
-// const producto3 = new Producto(2, 'Placa de video', 1, 60000)
-// const producto4 = new Producto(3, 'Memoria Ram', 1, 8000)
-// const producto5 = new Producto(4, 'Fuente de poder', 1, 10000)
+// const producto1 = new Producto(0, 'MOTHERBOARD', 1, 15000)
+// const producto2 = new Producto(1, 'PROCESADOR', 1, 45000)
+// const producto3 = new Producto(2, 'PLACA DE VIDEO', 1, 60000)
+// const producto4 = new Producto(3, 'MEMORIA Ram', 1, 8000)
+// const producto5 = new Producto(4, 'FUENTE de poder', 1, 10000)
 // const producto6 = new Producto(5, 'HDD', 1, 4000)
 // const producto7 = new Producto(6, 'SSD', 1, 6000)
-// const producto8 = new Producto(7, 'Gabinete', 1, 12000)
+// const producto8 = new Producto(7, 'GABINETE', 1, 12000)
 
 // let carrito = []
 // let seleccionarProducto = true
@@ -70,7 +70,7 @@
 // }
 
 // while (seleccionarProducto) {
-//     let opcionProducto = prompt('Indique el número del producto que desea agregar al carrito:\n\n1. Motherboard\n2. Procesador\n3. Placa de video\n4. Memoria Ram\n5. Fuente de poder\n6. HDD\n7. SSD\n8. Gabinete')
+//     let opcionProducto = prompt('Indique el número del producto que desea agregar al carrito:\n\n1. MOTHERBOARD\n2. PROCESADOR\n3. PLACA DE VIDEO\n4. MEMORIA Ram\n5. FUENTE de poder\n6. HDD\n7. SSD\n8. GABINETE')
 
 //     switch (opcionProducto) {
 //         case '1':
@@ -115,44 +115,115 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Creando los productos en el HTML mediante el uso de DOM
+const productos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9, producto10, producto11, producto12, producto13, producto14, producto15, producto16, producto17, producto18, producto19, producto20, producto21, producto22, producto23, producto24, producto25, producto26, producto27, producto28, producto29, producto30, producto31, producto32, producto33, producto34, producto35, producto36, producto37, producto38, producto39, producto40, producto41, producto42, producto43, producto44]
 
-class Articulo {
-    constructor(descripcion, categoria, destacado, imagen, precio) {
-        this.descripcion = descripcion
-        this.categoria = categoria
-        this.destacado = destacado
-        this.imagen = imagen
-        this.precio = precio
+const sectionProductos = document.querySelector('.productos')
+
+// MOSTRAR PRODUCTOS
+
+const mostrarProductos = (producto, filtro) => {
+    if (filtro) {
+        const nuevoArticle = document.createElement('article')
+        nuevoArticle.innerHTML = `
+        <span class="descripcion">${producto.descripcion}</span>
+        <img src="${producto.imagen}" alt="${producto.descripcion}">
+        <span>$${producto.precio}</span>
+        <input class='button' type="button" value="Agregar al carrito">
+        `
+        nuevoArticle.classList.add('producto')
+        sectionProductos.append(nuevoArticle)
     }
 }
 
-const articulo1 = new Articulo('Ryzen 5 5600G', 'Procesadores', true, './media/ryzen_5_5600g.jpg', 38449)
-const articulo2 = new Articulo('Ryzen 7 5700G', 'Procesadores', true,'./media/ryzen_7_5700g.jpg', 54999)
-const articulo3 = new Articulo('Intel Core i3 12100F', 'Procesadores', true,'./media/intel_i3_12100f.jpeg', 20200)
-const articulo4 = new Articulo('Intel Core i5 12400F', 'Procesadores', true,'./media/intel_i5_12400f.jpg', 42990)
-const articulo5 = new Articulo('Mother ASUS A520', 'Motherboards', true,'./media/mother_asus_a520.jpg', 12830)
-const articulo6 = new Articulo('Mother Gigabyte H610', 'Motherboards', true,'./media/mother_gigabyte_h610.jpg', 20782)
-const articulo7 = new Articulo('Placa de video GTX 1650', 'Placas de video', true,'./media/placa_de_video_gtx1650.jpg', 52272)
-const articulo8 = new Articulo('Placa de video RX 6500XT', 'Placas de video', true,'./media/placa_de_video_rx6500.jpg', 59850)
-const articulo9 = new Articulo('Memoria RAM HyperX 8gb 3200MHZ', 'Memorias RAM', true,'./media/ram_hyperx_8gb.jpg', 7300)
+// LIMPIAR PRODUCTOS MOSTRADOS
 
-const articulos = [articulo1, articulo2, articulo3, articulo4, articulo5, articulo6, articulo7, articulo8, articulo9]
-const sectionProductos = document.querySelector('#articulos')
+const limpiarProductos = () => {
+    sectionProductos.innerHTML = ''
+}
 
-articulos.forEach((articulo) => {
-    const nuevoArticle = document.createElement('article')
-    nuevoArticle.innerHTML = `
-        <p>${articulo.descripcion}</p>
-        <img src="${articulo.imagen}" alt="${articulo.descripcion}">
-        <p>$${articulo.precio}</p>
-        <input class='button' type="button" value="Agregar al carrito">
-    `
-    nuevoArticle.className = 'producto'
-    sectionProductos.append(nuevoArticle)
+// LIMPIAR BUSQUEDA
+
+const limpiarBusqueda = () => {
+    document.querySelector('#txtBusqueda').value = ''
+}
+
+// MODIFICAR FILTRO DE BUSQUEDA
+
+const modificarFiltroBusqueda = (mensaje) => {
+    document.querySelector('#filtro').textContent = mensaje
+}
+
+// MOSTRAR PRODUCTOS DESTACADOS
+
+productos.forEach((producto) => {
+        mostrarProductos(producto, producto.destacado)
 })
 
-let usuario = prompt('Ingrese su nombre')
+modificarFiltroBusqueda('Productos Destacados')
 
-const bienvenida = document.querySelector('#bienvenida')
-bienvenida.innerHTML = '¡Hola ' + usuario + '!'
+// MOSTRAR PRODUCTOS POR BUSQUEDA
+
+const buscarProductos = () => {
+    let txtBusqueda = document.querySelector('#txtBusqueda').value
+    let arrayBusqueda = txtBusqueda.split(' ')
+    console.log(arrayBusqueda)
+    console.log(arrayBusqueda.length)
+
+    if (txtBusqueda != '') {
+        limpiarProductos()
+        productos.forEach((producto) => {
+            let contienePalabra = 0
+            for (i = 0; i < arrayBusqueda.length; i++) {
+                if (producto.descripcion.includes(arrayBusqueda[i].toUpperCase())) {
+                    contienePalabra++
+                }
+            }
+            if (contienePalabra == arrayBusqueda.length) {
+                mostrarProductos(producto, true)
+            }
+        })
+
+        limpiarBusqueda()
+        modificarFiltroBusqueda(`Resultado de búsqueda: "${txtBusqueda}"`)
+    }
+}
+
+// BUSQUEDA CON TECLA ENTER
+
+let inputBusqueda = document.querySelector('#txtBusqueda')
+
+inputBusqueda.addEventListener('keyup', (e) => {
+    if (e.code === 'Enter') {
+        e.preventDefault();
+        buscarProductos()
+    }
+})
+
+// BUSQUEDA CON BOTON BUSCAR
+
+let btnBusqueda = document.querySelector('#btnBusqueda')
+
+btnBusqueda.addEventListener('click', (e) => {
+    e.preventDefault
+    buscarProductos()
+})
+
+// MOSTRAR PRODUCTOS POR CATEGORIA
+
+let categorias = document.querySelectorAll('.categoria')
+
+categorias.forEach((categoria) => {
+    categoria.addEventListener('click', (e) => {
+        e.preventDefault
+        let categoriaProducto = e.target.getAttribute('data-id').toUpperCase()
+        limpiarProductos()
+        productos.forEach((producto) => {
+            if (producto.categoria == categoriaProducto) {
+                mostrarProductos(producto, true)
+            }
+        })
+        limpiarBusqueda()
+        let categoriaMensaje = categoriaProducto.substring(0, 1) + categoriaProducto.substring(1, ).toLowerCase()
+        modificarFiltroBusqueda(categoriaMensaje)
+    })
+});
