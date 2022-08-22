@@ -1,15 +1,19 @@
+// CARGAR PRODUCTOS DEL CARRITO
+
+let carrito = localStorage.getItem('carrito') ? JSON.parse(localStorage.getItem('carrito')) : [] // OPERADOR TERNARIO
+
 // MOSTRAR PRODUCTOS
 
 const sectionProductos = document.querySelector('.productos')
 
-const mostrarProductos = (producto, filtro) => {
+const mostrarProductos = ({id, descripcion, imagen, precio}, filtro) => { // DESESTRUCTURACIÓN DE OBJETO POR PARÁMETROS
     if (filtro) {
         const nuevoArticle = document.createElement('article')
         nuevoArticle.innerHTML = `
-            <span class="descripcion">${producto.descripcion}</span>
-            <img src="${producto.imagen}" alt="${producto.descripcion}">
-            <span>$${producto.precio}</span>
-            <input class="btnAgregarAlCarrito" type="button" value="Agregar al carrito" data-id="${producto.id}">
+            <span class="descripcion">${descripcion}</span>
+            <img src="${imagen}" alt="${descripcion}">
+            <span>$${precio}</span>
+            <input class="btnAgregarAlCarrito" type="button" value="Agregar al carrito" data-id="${id}">
         `
         nuevoArticle.classList.add('producto')
         sectionProductos.append(nuevoArticle)
@@ -42,14 +46,6 @@ productos.forEach((producto) => {
 
 modificarFiltroBusqueda('Productos Destacados')
 
-// CARGAR PRODUCTOS DEL CARRITO
-
-let carrito = []
-
-if (localStorage.getItem('carrito')) {
-    carrito = JSON.parse(localStorage.getItem('carrito'))
-}
-
 // AGREGAR PRODUCTO AL CARRITO
 
 const logoCarrito = document.querySelector('.carrito')
@@ -70,7 +66,6 @@ const botonesAgregarAlCarrito = () => {
                 carrito.push(productoSeleccionado)
             }
             localStorage.setItem('carrito', JSON.stringify(carrito))
-    
             mostrarNumProductosCarrito()
         })
     })
@@ -148,9 +143,7 @@ categorias.forEach((categoria) => {
         const categoriaProducto = e.target.getAttribute('data-id').toUpperCase()
         limpiarProductos()
         productos.forEach((producto) => {
-            if (producto.categoria == categoriaProducto) {
-                mostrarProductos(producto, true)
-            }
+            producto.categoria == categoriaProducto && mostrarProductos(producto, true) // OPERADOR LÓGICO "AND"
         })
         botonesAgregarAlCarrito()
         limpiarBusqueda()

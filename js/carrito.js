@@ -1,11 +1,9 @@
-let carrito = []
-
 const sectionCarrito = document.querySelector('.carrito')
 
+let carrito
+
 const obtenerDatosStorage = () => {
-    if (localStorage.getItem('carrito')) {
-        carrito = JSON.parse(localStorage.getItem('carrito'))
-    }
+    carrito = localStorage.getItem('carrito') ? JSON.parse(localStorage.getItem('carrito')) : [] // OPERADOR TERNARIO
 }
 
 const guardarDatosStorage = () => {
@@ -76,7 +74,7 @@ const botonesRestarCantidadProducto = () => {
             const idProducto = e.target.getAttribute('data-id')
             const productoSeleccionado = carrito.find((producto) => producto.id == idProducto)
             if (productoSeleccionado.cantidad > 1) {
-                const index = carrito.indexOf(productoSeleccionado);
+                const index = carrito.indexOf(productoSeleccionado)
                 carrito[index].cantidad--
                 guardarDatosStorage()
                 limpiarProductos()
@@ -93,36 +91,36 @@ const mostrarProductosCarrito = () => {
     obtenerDatosStorage()
     if (carrito.length != 0) {
         let totalCarrito = 0
-        carrito.forEach((producto) => {
+        carrito.forEach(({id, descripcion, imagen, precio, cantidad}) => { // DESESTRUCTURACIÓN DE OBJETO POR PARÁMETROS
             const nuevoDiv = document.createElement('div')
             nuevoDiv.innerHTML = `
                 <article class="detalleProductoCarrito">
-                    <img src="${producto.imagen}" alt="${producto.descripcion}">
-                    <strong>${producto.descripcion}</strong>
+                    <img src="${imagen}" alt="${descripcion}">
+                    <strong>${descripcion}</strong>
                     <div>
                         <span>Precio:</span>
-                        <strong>$${producto.precio}</strong>
+                        <strong>$${precio}</strong>
                     </div>
                     <div class="cantidadProductoCarrito">
                         <div>
                             <span>Cantidad:</span>
-                            <strong>${producto.cantidad}</strong>
+                            <strong>${cantidad}</strong>
                         </div>
                         <div class="botonesSumarRestar">
-                            <input type="button" value="+" class="btnSumar" data-id="${producto.id}">
-                            <input type="button" value="-" class="btnRestar" data-id="${producto.id}">
+                            <input type="button" value="+" class="btnSumar" data-id="${id}">
+                            <input type="button" value="-" class="btnRestar" data-id="${id}">
                         </div>
                     </div>
                     <div>
                         <span>Total:</span>
-                        <strong>$${producto.precio * producto.cantidad}</strong>
+                        <strong>$${precio * cantidad}</strong>
                     </div>
                 </article>
-                <input type="button" value="X" class="btnEliminarProductoCarrito" data-id="${producto.id}">
+                <input type="button" value="X" class="btnEliminarProductoCarrito" data-id="${id}">
             `
             nuevoDiv.classList.add('productoCarrito')
             sectionCarrito.append(nuevoDiv)
-            totalCarrito += producto.precio * producto.cantidad
+            totalCarrito += precio * cantidad
         })
         const nuevoDiv = document.createElement('div')
         nuevoDiv.innerHTML = `
@@ -141,5 +139,6 @@ const mostrarProductosCarrito = () => {
     }
 }
 
+obtenerDatosStorage()
 mostrarProductosCarrito()
 mostrarNumProductosCarrito()
