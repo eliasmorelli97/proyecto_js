@@ -67,8 +67,8 @@ const botonesSumarCantidadProducto = () => {
 // RESTAR CANTIDAD A UN PRODUCTO
 
 const botonesRestarCantidadProducto = () => {
-    const RestarCantidadProducto = document.querySelectorAll('.btnRestar')
-    RestarCantidadProducto.forEach((button) => {
+    const restarCantidadProducto = document.querySelectorAll('.btnRestar')
+    restarCantidadProducto.forEach((button) => {
         button.addEventListener('click', (e) => {
             e.preventDefault
             const idProducto = e.target.getAttribute('data-id')

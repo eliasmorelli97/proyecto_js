@@ -48,7 +48,7 @@ modificarFiltroBusqueda('Productos Destacados')
 
 // AGREGAR PRODUCTO AL CARRITO
 
-const logoCarrito = document.querySelector('.carrito')
+const logoCarrito = document.querySelector('.logoCarrito')
 
 const botonesAgregarAlCarrito = () => {
     const agregarProductoAlCarrito = document.querySelectorAll('.btnAgregarAlCarrito')
@@ -67,6 +67,26 @@ const botonesAgregarAlCarrito = () => {
             }
             localStorage.setItem('carrito', JSON.stringify(carrito))
             mostrarNumProductosCarrito()
+
+            Swal.fire({
+                html: `
+                    <div class="toast">
+                        <strong>Producto agregado al carrito</strong>
+                        <hr>
+                        <div class="toastDetalle">
+                            <img src="${productoSeleccionado.imagen}" alt="${productoSeleccionado.descripcion}">
+                            <span class="descripcion">${productoSeleccionado.descripcion}</span>
+                        </div>
+                    </div>
+                `,
+                showConfirmButton: false,
+                padding: '0.8rem',
+                color: 'white',
+                background: '#A22E9E',
+                toast: true,
+                position: 'bottom-end',
+                timer: 3000
+            })
         })
     })
 }
