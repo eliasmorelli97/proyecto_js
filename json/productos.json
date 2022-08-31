@@ -1,0 +1,398 @@
+[
+    {
+        "id": "001",
+        "descripcion": "PROCESADOR RYZEN 5 5600G",
+        "categoria": "PROCESADORES",
+        "destacado": true,
+        "imagen": "./media/productos/ryzen_5_5600g.jpg",
+        "precio": 38449,
+        "cantidad": 1
+    },
+    {
+        "id": "002",
+        "descripcion": "PROCESADOR RYZEN 7 5700G",
+        "categoria": "PROCESADORES",
+        "destacado": true,
+        "imagen": "./media/productos/ryzen_7_5700g.jpg",
+        "precio": 54999,
+        "cantidad": 1
+    },
+    {
+        "id": "003",
+        "descripcion": "PROCESADOR INTEL CORE I3 12100F",
+        "categoria": "PROCESADORES",
+        "destacado": false,
+        "imagen": "./media/productos/intel_i3_12100f.jpg",
+        "precio": 20200,
+        "cantidad": 1
+    },
+    {
+        "id": "004",
+        "descripcion": "PROCESADOR INTEL CORE I5 12400F",
+        "categoria": "PROCESADORES",
+        "destacado": true,
+        "imagen": "./media/productos/intel_i5_12400f.jpg",
+        "precio": 42990,
+        "cantidad": 1
+    },
+    {
+        "id": "005",
+        "descripcion": "MOTHERBOARD ASUS A520",
+        "categoria": "MOTHERBOARDS",
+        "destacado": false,
+        "imagen": "./media/productos/mother_asus_a520.jpg",
+        "precio": 12830,
+        "cantidad": 1
+    },
+    {
+        "id": "006",
+        "descripcion": "MOTHERBOARD GIGABYTE H610",
+        "categoria": "MOTHERBOARDS",
+        "destacado": false,
+        "imagen": "./media/productos/mother_gigabyte_h610.jpg",
+        "precio": 20782,
+        "cantidad": 1
+    },
+    {
+        "id": "007",
+        "descripcion": "PLACA DE VIDEO ASUS GTX 1650",
+        "categoria": "PLACAS DE VIDEO",
+        "destacado": false,
+        "imagen": "./media/productos/placa_de_video_gtx_1650.jpg",
+        "precio": 52272,
+        "cantidad": 1
+    },
+    {
+        "id": "008",
+        "descripcion": "PLACA DE VIDEO RX 6500XT",
+        "categoria": "PLACAS DE VIDEO",
+        "destacado": true,
+        "imagen": "./media/productos/placa_de_video_rx_6500xt.jpg",
+        "precio": 59850,
+        "cantidad": 1
+    },
+    {
+        "id": "009",
+        "descripcion": "PROCESADOR ATHLON 3000G",
+        "categoria": "PROCESADORES",
+        "destacado": false,
+        "imagen": "./media/productos/athlon_3000g.jpg",
+        "precio": 19189,
+        "cantidad": 1
+    },
+    {
+        "id": "010",
+        "descripcion": "FUENTE COOLERMASTER 800W 80+ GOLD",
+        "categoria": "FUENTES",
+        "destacado": false,
+        "imagen": "./media/productos/fuente_coolermaster_800w.jpg",
+        "precio": 22186,
+        "cantidad": 1
+    },
+    {
+        "id": "011",
+        "descripcion": "FUENTE CYLON 600W 80+ BRONZE",
+        "categoria": "FUENTES",
+        "destacado": true,
+        "imagen": "./media/productos/fuente_cylon_600w.jpg",
+        "precio": 10200,
+        "cantidad": 1
+    },
+    {
+        "id": "012",
+        "descripcion": "FUENTE EVGA 500W 80+ WHITE",
+        "categoria": "FUENTES",
+        "destacado": false,
+        "imagen": "./media/productos/fuente_evga_500w.jpg",
+        "precio": 8887,
+        "cantidad": 1
+    },
+    {
+        "id": "013",
+        "descripcion": "FUENTE GIGABYTE 1000W 80+ GOLD",
+        "categoria": "FUENTES",
+        "destacado": false,
+        "imagen": "./media/productos/fuente_gigabyte_1000w.jpg",
+        "precio": 29990,
+        "cantidad": 1
+    },
+    {
+        "id": "014",
+        "descripcion": "GABINETE AEROCOOL BIONIC",
+        "categoria": "GABINETES",
+        "destacado": false,
+        "imagen": "./media/productos/gabinete_aerocool_bionic.jpg",
+        "precio": 9128,
+        "cantidad": 1
+    },
+    {
+        "id": "015",
+        "descripcion": "GABINETE AEROCOOL FALCON",
+        "categoria": "GABINETES",
+        "destacado": true,
+        "imagen": "./media/productos/gabinete_aerocool_falcon.jpg",
+        "precio": 14990,
+        "cantidad": 1
+    },
+    {
+        "id": "016",
+        "descripcion": "GABINETE Deepcool MATREXX",
+        "categoria": "GABINETES",
+        "destacado": false,
+        "imagen": "./media/productos/gabinete_deepcool_matrexx.jpg",
+        "precio": 22300,
+        "cantidad": 1
+    },
+    {
+        "id": "017",
+        "descripcion": "GABINETE KOLINK INSPIRE",
+        "categoria": "GABINETES",
+        "destacado": false,
+        "imagen": "./media/productos/gabinete_kolink_inspire.jpg",
+        "precio": 8450,
+        "cantidad": 1
+    },
+    {
+        "id": "018",
+        "descripcion": "HDD SEAGATE BARRACUDA 1TB",
+        "categoria": "HDD",
+        "destacado": false,
+        "imagen": "./media/productos/hdd_seagate_barracuda_1tb.jpg",
+        "precio": 7400,
+        "cantidad": 1
+    },
+    {
+        "id": "019",
+        "descripcion": "HDD WESTERN DIGITAL BLUE 1TB",
+        "categoria": "HDD",
+        "destacado": false,
+        "imagen": "./media/productos/hdd_wd_blue_1tb.jpg",
+        "precio": 7400,
+        "cantidad": 1
+    },
+    {
+        "id": "020",
+        "descripcion": "PROCESADOR INTEL CORE I7 12700F",
+        "categoria": "PROCESADORES",
+        "destacado": false,
+        "imagen": "./media/productos/intel_i7_12700f.jpg",
+        "precio": 71599,
+        "cantidad": 1
+    },
+    {
+        "id": "021",
+        "descripcion": "PROCESADOR INTEL CORE I9 12900K",
+        "categoria": "PROCESADORES",
+        "destacado": false,
+        "imagen": "./media/productos/intel_i9_12900k.jpg",
+        "precio": 117104,
+        "cantidad": 1
+    },
+    {
+        "id": "022",
+        "descripcion": "MOTHERBOARD ASUS A320",
+        "categoria": "MOTHERBOARDS",
+        "destacado": false,
+        "imagen": "./media/productos/mother_asus_a320.jpg",
+        "precio": 9450,
+        "cantidad": 1
+    },
+    {
+        "id": "024",
+        "descripcion": "MOTHERBOARD ASUS B450",
+        "categoria": "MOTHERBOARDS",
+        "destacado": false,
+        "imagen": "./media/productos/mother_asus_b450.jpg",
+        "precio": 23073,
+        "cantidad": 1
+    },
+    {
+        "id": "023",
+        "descripcion": "MOTHERBOARD GIGABYTE B550",
+        "categoria": "MOTHERBOARDS",
+        "destacado": false,
+        "imagen": "./media/productos/mother_gigabyte_b550.jpg",
+        "precio": 31300,
+        "cantidad": 1
+    },
+    {
+        "id": "025",
+        "descripcion": "MOTHERBOARD GIGABYTE B660",
+        "categoria": "MOTHERBOARDS",
+        "destacado": false,
+        "imagen": "./media/productos/mother_gigabyte_b660.jpg",
+        "precio": 46999,
+        "cantidad": 1
+    },
+    {
+        "id": "026",
+        "descripcion": "PLACA DE VIDEO GIGABYTE RTX 3060",
+        "categoria": "PLACAS DE VIDEO",
+        "destacado": false,
+        "imagen": "./media/productos/placa_de_video_rtx_3060.jpg",
+        "precio": 104995,
+        "cantidad": 1
+    },
+    {
+        "id": "027",
+        "descripcion": "PLACA DE VIDEO MSI RTX 3070",
+        "categoria": "PLACAS DE VIDEO",
+        "destacado": false,
+        "imagen": "./media/productos/placa_de_video_rtx_3070.jpg",
+        "precio": 135999,
+        "cantidad": 1
+    },
+    {
+        "id": "028",
+        "descripcion": "PLACA DE VIDEO ZOTAC RTX 3080",
+        "categoria": "PLACAS DE VIDEO",
+        "destacado": true,
+        "imagen": "./media/productos/placa_de_video_rtx_3080.jpg",
+        "precio": 175000,
+        "cantidad": 1
+    },
+    {
+        "id": "029",
+        "descripcion": "PLACA DE VIDEO EVGA RTX 3090",
+        "categoria": "PLACAS DE VIDEO",
+        "destacado": false,
+        "imagen": "./media/productos/placa_de_video_rtx_3090.jpg",
+        "precio": 308000,
+        "cantidad": 1
+    },
+    {
+        "id": "030",
+        "descripcion": "PLACA DE VIDEO MSI RX 6700XT",
+        "categoria": "PLACAS DE VIDEO",
+        "destacado": false,
+        "imagen": "./media/productos/placa_de_video_rx_6700xt.jpg",
+        "precio": 105392,
+        "cantidad": 1
+    },
+    {
+        "id": "031",
+        "descripcion": "PLACA DE VIDEO GIGABYTE RX 6900XT",
+        "categoria": "PLACAS DE VIDEO",
+        "destacado": false,
+        "imagen": "./media/productos/placa_de_video_rx_6900xt.jpg",
+        "precio": 245990,
+        "cantidad": 1
+    },
+    {
+        "id": "032",
+        "descripcion": "MEMORIA RAM ADATA 8GB 3200MHZ",
+        "categoria": "MEMORIAS RAM",
+        "destacado": false,
+        "imagen": "./media/productos/ram_adata_8gb.jpg",
+        "precio": 7423,
+        "cantidad": 1
+    },
+    {
+        "id": "033",
+        "descripcion": "MEMORIA RAM CORSAIR 8GB 3200MHZ",
+        "categoria": "MEMORIAS RAM",
+        "destacado": false,
+        "imagen": "./media/productos/ram_corsair_8gb.jpg",
+        "precio": 7305,
+        "cantidad": 1
+    },
+    {
+        "id": "034",
+        "descripcion": "MEMORIA RAM CORSAIR 16GB 3600MHZ",
+        "categoria": "MEMORIAS RAM",
+        "destacado": true,
+        "imagen": "./media/productos/ram_corsair_16gb.jpg",
+        "precio": 14764,
+        "cantidad": 1
+    },
+    {
+        "id": "035",
+        "descripcion": "MEMORIA RAM HYPERX 8GB 3200MHZ",
+        "categoria": "MEMORIAS RAM",
+        "destacado": false,
+        "imagen": "./media/productos/ram_hyperx_8gb.jpg",
+        "precio": 7300,
+        "cantidad": 1
+    },
+    {
+        "id": "036",
+        "descripcion": "MEMORIA RAM HYPERX 16GB 3200MHZ",
+        "categoria": "MEMORIAS RAM",
+        "destacado": false,
+        "imagen": "./media/productos/ram_hyperx_16gb.jpg",
+        "precio": 15665,
+        "cantidad": 1
+    },
+    {
+        "id": "037",
+        "descripcion": "PROCESADOR RYZEN 5 5600X",
+        "categoria": "PROCESADORES",
+        "destacado": false,
+        "imagen": "./media/productos/ryzen_5_5600x.jpg",
+        "precio": 43899,
+        "cantidad": 1
+    },
+    {
+        "id": "038",
+        "descripcion": "PROCESADOR RYZEN 9 5900X",
+        "categoria": "PROCESADORES",
+        "destacado": false,
+        "imagen": "./media/productos/ryzen_9_5900x.jpg",
+        "precio": 86999,
+        "cantidad": 1
+    },
+    {
+        "id": "039",
+        "descripcion": "SSD ADATA 240GB",
+        "categoria": "SSD",
+        "destacado": false,
+        "imagen": "./media/productos/ssd_adata_240gb.jpg",
+        "precio": 5699,
+        "cantidad": 1
+    },
+    {
+        "id": "040",
+        "descripcion": "SSD GIGABYTE 120GB",
+        "categoria": "SSD",
+        "destacado": false,
+        "imagen": "./media/productos/ssd_gigabyte_120gb.jpg",
+        "precio": 3360,
+        "cantidad": 1
+    },
+    {
+        "id": "041",
+        "descripcion": "SSD KINGSTON 240GB",
+        "categoria": "SSD",
+        "destacado": false,
+        "imagen": "./media/productos/ssd_kingston_240gb.jpg",
+        "precio": 5480,
+        "cantidad": 1
+    },
+    {
+        "id": "042",
+        "descripcion": "SSD NVME CORSAIR 480GB",
+        "categoria": "SSD",
+        "destacado": true,
+        "imagen": "./media/productos/ssd_nvme_corsair_480gb.jpg",
+        "precio": 14666,
+        "cantidad": 1
+    },
+    {
+        "id": "043",
+        "descripcion": "SSD NVME KINGSTON 1TB",
+        "categoria": "SSD",
+        "destacado": false,
+        "imagen": "./media/productos/ssd_nvme_kingston_1tb.jpg",
+        "precio": 19499,
+        "cantidad": 1
+    },
+    {
+        "id": "044",
+        "descripcion": "SSD WESTERN DIGITAL GREEN 480GB",
+        "categoria": "SSD",
+        "destacado": false,
+        "imagen": "./media/productos/ssd_wd_green_480gb.jpg",
+        "precio": 8600,
+        "cantidad": 1
+    }
+]

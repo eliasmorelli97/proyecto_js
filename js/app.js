@@ -1,3 +1,5 @@
+let productos = []
+
 // CARGAR PRODUCTOS DEL CARRITO
 
 let carrito = localStorage.getItem('carrito') ? JSON.parse(localStorage.getItem('carrito')) : [] // OPERADOR TERNARIO
@@ -37,14 +39,6 @@ const limpiarBusqueda = () => {
 const modificarFiltroBusqueda = (mensaje) => {
     document.querySelector('#filtro').textContent = mensaje
 }
-
-// MOSTRAR PRODUCTOS DESTACADOS
-
-productos.forEach((producto) => {
-        mostrarProductos(producto, producto.destacado)
-})
-
-modificarFiltroBusqueda('Productos Destacados')
 
 // AGREGAR PRODUCTO AL CARRITO
 
@@ -91,8 +85,6 @@ const botonesAgregarAlCarrito = () => {
     })
 }
 
-botonesAgregarAlCarrito()
-
 // MOSTRAR JUNTO AL LOGO DEL CARRITO EL NÚMERO DE PRODUCTOS QUE HAY AGREGADOS
 
 const mostrarNumProductosCarrito = () => {
@@ -106,13 +98,20 @@ const mostrarNumProductosCarrito = () => {
 
 mostrarNumProductosCarrito()
 
+// MOSTRAR PRODUCTOS DESTACADOS
+
+const mostrarProductosDestacados = () => {
+    productos.forEach((producto) => {
+        mostrarProductos(producto, producto.destacado)
+        modificarFiltroBusqueda('Productos Destacados')
+    })
+}
+
 // MOSTRAR PRODUCTOS POR BUSQUEDA
 
 const buscarProductos = () => {
     const txtBusqueda = document.querySelector('#txtBusqueda').value
     const arrayBusqueda = txtBusqueda.split(' ')
-    console.log(arrayBusqueda)
-    console.log(arrayBusqueda.length)
     if (txtBusqueda != '') {
         limpiarProductos()
         productos.forEach((producto) => {
@@ -171,3 +170,14 @@ categorias.forEach((categoria) => {
         modificarFiltroBusqueda(categoriaMensaje)
     })
 });
+
+// TRAER PRODUCTOS DEL JSON
+
+const obtenerProductos = async () => {
+    const response = await fetch('../json/productos.json')
+    productos = await response.json()
+    mostrarProductosDestacados()
+    botonesAgregarAlCarrito()
+}
+
+obtenerProductos()
