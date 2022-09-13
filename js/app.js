@@ -159,14 +159,14 @@ const categorias = document.querySelectorAll('.categoria')
 categorias.forEach((categoria) => {
     categoria.addEventListener('click', (e) => {
         e.preventDefault
-        const categoriaProducto = e.target.getAttribute('data-id').toUpperCase()
+        const categoriaProducto = e.target.getAttribute('data-id')
         limpiarProductos()
         productos.forEach((producto) => {
-            producto.categoria == categoriaProducto && mostrarProductos(producto, true) // OPERADOR LÓGICO "AND"
+            producto.categoria == categoriaProducto.toUpperCase() && mostrarProductos(producto, true) // OPERADOR LÓGICO "AND"
         })
         botonesAgregarAlCarrito()
         limpiarBusqueda()
-        const categoriaMensaje = categoriaProducto.substring(0, 1) + categoriaProducto.substring(1, ).toLowerCase()
+        const categoriaMensaje = categoriaProducto
         modificarFiltroBusqueda(categoriaMensaje)
     })
 });

@@ -32,8 +32,8 @@ const mostrarNumProductosCarrito = () => {
 // ELIMINAR PRODUCTO DEL CARRITO
 
 const botonesEliminarProductoCarrito = () => {
-    const eliminarProductoCarrito = document.querySelectorAll('.btnEliminarProductoCarrito')
-    eliminarProductoCarrito.forEach((button) => {
+    const btnEliminarProductoCarrito = document.querySelectorAll('.btnEliminarProductoCarrito')
+    btnEliminarProductoCarrito.forEach((button) => {
         button.addEventListener('click', (e) => {
             e.preventDefault
             const idProducto = e.target.getAttribute('data-id')
@@ -49,8 +49,8 @@ const botonesEliminarProductoCarrito = () => {
 // SUMAR CANTIDAD A UN PRODUCTO
 
 const botonesSumarCantidadProducto = () => {
-    const sumarRestarCantidadProducto = document.querySelectorAll('.btnSumar')
-    sumarRestarCantidadProducto.forEach((button) => {
+    const btnsSumarRestarCantidadProducto = document.querySelectorAll('.btnSumar')
+    btnsSumarRestarCantidadProducto.forEach((button) => {
         button.addEventListener('click', (e) => {
             e.preventDefault
             const idProducto = e.target.getAttribute('data-id')
@@ -67,8 +67,8 @@ const botonesSumarCantidadProducto = () => {
 // RESTAR CANTIDAD A UN PRODUCTO
 
 const botonesRestarCantidadProducto = () => {
-    const restarCantidadProducto = document.querySelectorAll('.btnRestar')
-    restarCantidadProducto.forEach((button) => {
+    const btnsRestarCantidadProducto = document.querySelectorAll('.btnRestar')
+    btnsRestarCantidadProducto.forEach((button) => {
         button.addEventListener('click', (e) => {
             e.preventDefault
             const idProducto = e.target.getAttribute('data-id')
@@ -83,6 +83,43 @@ const botonesRestarCantidadProducto = () => {
             }
         })
     })
+}
+
+// VACIAR CARRITO
+
+const vaciarCarrito = () => {
+    carrito = []
+    guardarDatosStorage()
+    limpiarProductos()
+    mostrarProductosCarrito()
+    mostrarNumProductosCarrito()
+}
+
+const botonVaciarCarrito = () => {
+    const btnVaciarCarrito = document.querySelector('.btnVaciarCarrito')
+    btnVaciarCarrito.addEventListener('click', (e) => {
+        e.preventDefault
+        vaciarCarrito()
+    })
+}
+
+// FINALIZAR COMPRA
+
+const botonFinalizarCompra = () => {
+    const btnFinalizarCompra = document.querySelector('.btnFinalizarCompra')
+    btnFinalizarCompra.addEventListener('click', (e) => {
+        e.preventDefault
+        mensajeCompraFinalizada()
+    })
+}
+
+const mensajeCompraFinalizada = async () => {
+    await Swal.fire({
+        icon: 'success',
+        title: '¡Compra finalizada con éxito!',
+        text: 'Gracias por comprar en Hardware Knights'
+    })
+    vaciarCarrito()
 }
 
 // MOSTRAR PRODUCTOS DEL CARRITO
@@ -129,9 +166,20 @@ const mostrarProductosCarrito = () => {
         `
         nuevoDiv.classList.add('totalCarrito')
         sectionCarrito.append(nuevoDiv)
+
+        const nuevoDiv2 = document.createElement('div')
+        nuevoDiv2.innerHTML = `
+            <input type="button" value="Vaciar Carrito" class="btnVaciarCarrito">
+            <input type="button" value="Finalizar Compra" class="btnFinalizarCompra">
+        `
+        nuevoDiv2.classList.add('botonesVaciarFinalizar')
+        sectionCarrito.append(nuevoDiv2)
+
         botonesEliminarProductoCarrito()
         botonesSumarCantidadProducto()
         botonesRestarCantidadProducto()
+        botonVaciarCarrito()
+        botonFinalizarCompra()
     } else {
         const nuevoH1 = document.createElement('h1')
         nuevoH1.innerHTML = 'No hay productos en el carrito'
