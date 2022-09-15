@@ -161,11 +161,13 @@ img {
 
 #btnBusqueda {
     flex-basis: 20%;
+    min-width: 6rem;
     border-radius: 0.5rem;
     font-size: 2em;
     cursor: pointer;
     background-color: #A22E9E;
     color: white;
+    text-align: center;
 }
 
 .contenedor h2 {
@@ -214,6 +216,7 @@ img {
     cursor: pointer;
     background-color: #A22E9E;
     color: white;
+    text-align: center;
 }
 
 /* MAIN CARRITO */
@@ -294,6 +297,7 @@ img {
     background-color: #A22E9E;
     color: white;
     cursor: pointer;
+    text-align: center;
 }
 
 .btnEliminarProductoCarrito {
@@ -303,6 +307,7 @@ img {
     border-radius: 0.4rem;
     color: white;
     cursor: pointer;
+    text-align: center;
 }
 
 .totalCarrito {
@@ -328,6 +333,7 @@ img {
     font-size: 1em;
     padding: 0.5rem;
     min-width: 11rem;
+    text-align: center;
 }
 
 /* TOAST */
@@ -448,7 +454,7 @@ img {
 
     #btnBusqueda {
         width: 20%;
-        min-width: 2.5rem;
+        min-height: 2.8rem;
     }
 
     .productos {
