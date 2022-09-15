@@ -464,6 +464,16 @@ img {
     .totalCarrito {
         font-size: 2em;
     }
+
+    .alert {
+        gap: 2.5rem;
+        padding: 2rem;
+    }
+
+    .alertDetalle {
+        gap: 1.2rem;
+        font-size: 2em;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -489,6 +499,16 @@ img {
 
     .btnCarrito {
         min-width: 10rem;
+    }
+
+    .alert {
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .alertDetalle {
+        gap: 1rem;
+        font-size: 0.9em;
     }
 }
 

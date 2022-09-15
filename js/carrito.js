@@ -126,7 +126,7 @@ const mensajeCompraFinalizada = async () => {
                 </div>
             </div>
         `,
-        width: '50%',
+        width: '90%',
         background: '#222020'
     })
     vaciarCarrito()
