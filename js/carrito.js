@@ -115,9 +115,19 @@ const botonFinalizarCompra = () => {
 
 const mensajeCompraFinalizada = async () => {
     await Swal.fire({
-        icon: 'success',
-        title: '¡Compra finalizada con éxito!',
-        text: 'Gracias por comprar en Hardware Knights'
+        html: `
+            <div class="alert">
+                <div class="alertImagen">
+                    <img src="./media/icon.png" alt="Logo de Hardware Knights">
+                </div>
+                <div class="alertDetalle">
+                    <strong>¡Compra finalizada con éxito!</strong>
+                    <p>Gracias por comprar en Hardware Knights</p>
+                </div>
+            </div>
+        `,
+        width: '50%',
+        background: '#222020'
     })
     vaciarCarrito()
 }
@@ -169,10 +179,10 @@ const mostrarProductosCarrito = () => {
 
         const nuevoDiv2 = document.createElement('div')
         nuevoDiv2.innerHTML = `
-            <input type="button" value="Vaciar Carrito" class="btnVaciarCarrito">
-            <input type="button" value="Finalizar Compra" class="btnFinalizarCompra">
+            <input type="button" value="Vaciar Carrito" class="btnCarrito btnVaciarCarrito">
+            <input type="button" value="Finalizar Compra" class="btnCarrito btnFinalizarCompra">
         `
-        nuevoDiv2.classList.add('botonesVaciarFinalizar')
+        nuevoDiv2.classList.add('botonesCarrito')
         sectionCarrito.append(nuevoDiv2)
 
         botonesEliminarProductoCarrito()

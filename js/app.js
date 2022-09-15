@@ -74,6 +74,7 @@ const botonesAgregarAlCarrito = () => {
                     </div>
                 `,
                 showConfirmButton: false,
+                showCloseButton: true,
                 padding: '0.8rem',
                 color: 'white',
                 background: '#A22E9E',
