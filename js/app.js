@@ -175,7 +175,7 @@ categorias.forEach((categoria) => {
 // TRAER PRODUCTOS DEL JSON
 
 const obtenerProductos = async () => {
-    const response = await fetch('../json/productos.json')
+    const response = await fetch('json/productos.json')
     productos = await response.json()
     mostrarProductosDestacados()
     botonesAgregarAlCarrito()
